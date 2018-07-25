@@ -1,0 +1,54 @@
+// ==UserScript==
+// @name         LinkedIn Presence
+// @namespace    http://microsoft.com/
+// @version      0.1
+// @description  try to take over the world!
+// @author       MukeshAg
+// @match        https://www.linkedin.com/mwlite/notifications
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+                    setTimeout(linkedInAccess, 4000);
+
+    function linkedInAccess() {
+
+                document.getElementsByClassName("notification-element")[0].style.borderLeft = "4px solid #0091CA";
+
+                var head = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+    link.id   = "peoplecss";
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://static-exp2.licdn.com/sc/h/br6n0hfizxs9um214rkgs1gkx';
+    link.media = 'all';
+    head.appendChild(link);
+
+                document.getElementsByClassName("notification-element")[0].innerHTML = '<a href="/mwlite/me/profile-views" class="flex-entity-lockup"><i class="person-entity-small ghost" role="presentation" aria-hidden="true"></i><div class="notification-center"><p class="entity-content medium">It looks like you are attending <strong>Microsoft Inspire</strong> conference</p><p class="entity-content small">Mukesh Agarwal and 10 others are here</p><div onclick="showPresentPeople()" id="showPeopleBtn" class="notification-actions"><button class="medium-dark-semibold notification-action nav-action">SEE ALL PRESENT HERE</button></div></div><div class="notification-right"><div class="setting-semaphore notification-action notification-settings medium-semibold" aria-label="Turn Off Notification" data-type="WVMP_V2" data-action-category="OPEN_SETTING" data-notification-control="cta_settings_edit" role="button"><span class="a11y-text">Settings</span><li-icon class="ellipsis-icon" type="ellipsis-vertical-icon" size="small" a11y-text="Settings" aria-hidden="true"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="icon"><g class="small-icon" style="fill-opacity: 1" id="ellipsis-vertical-icon-small">         <path d="M9,2V4H7V2H9ZM7,9H9V7H7V9Zm0,5H9V12H7v2Z"></path>       </g></svg></li-icon></div><div class="duration-since small">1m</div></div></a><section id="goingPeopleContainer" class="invitation-list-container pymk-container" style="display: none; margin-left: -16px;" id="pymk-section"><ul class="list-container"><li class="pymk-entry" data-id="urn:li:member:85040608" data-vanity="msshashikant" data-tracking-id="KZPIxNTAS9GWR3zwJp8sEg=="><div class="profile-details flex-entity-lockup"><a href="/in/msshashikant" class="entity-meta profile-image"><img class="person-entity-small" src="https://media.licdn.com/dms/image/C5603AQGFUIWw4rhrTw/profile-displayphoto-shrink_100_100/0?e=1538006400&amp;v=beta&amp;t=PuPzLPPbthKSRpm_4B8iFr1XFkl2lTID_DYc83DTYQo"></a><div style="max-height: 100%;" class="entity-content person-details"><a href="/in/msshashikant"><h3 class="medium-dark-semibold">Mukesh Agarwal</h3><div class="small headline" style="text-align: right;">Software engineer at Microsoft</div></a><div class="entity-content small">Get back in touch!</div><div class="pymk-actions actions-container"><button style="width: 100px;" class="secondary-button pymk-delete-btn">SCHEDULE</button><button class="primary-button pymk-connect-btn" style="width: 100px;padding-top: 2px;" data-invite-name="MS">MEET NOW</button><span class="invite-sent-msg msg medium hidden">Request sent to MS</span><span class="pymk-dismissed-msg msg medium hidden">Dismissed</span></div></div></div></li>                  <li class="pymk-entry" data-id="urn:li:member:76429515" data-vanity="jon-crawley-06371a21" data-tracking-id="FYK69YVuQFu0CRlsCUT1zA=="><div class="profile-details flex-entity-lockup"><a href="/in/jon-crawley-06371a21" class="entity-meta profile-image"><img class="person-entity-small" src="https://media.licdn.com/dms/image/C5603AQFskLRMCRrrDQ/profile-displayphoto-shrink_100_100/0?e=1538006400&amp;v=beta&amp;t=6dvaP3LyBlmA0j3uNwoEa11RZYn294s8gpA5qgK9pW8"></a><div style="max-height: 100%;" class="entity-content person-details"><a href="/in/jon-crawley-06371a21"><h3 class="medium-dark-semibold">Jon Crawley</h3><div class="small headline" style="text-align: right;">Recruiter at Dropbox</div></a><div class="entity-content small">Potential <strong>mentor</strong> for you!</div><div class="pymk-actions actions-container"><button style="width: 100px;" id="customSecondaryBtn" class="secondary-button pymk-delete-btn">SCHEDULE</button><button id="customPrimaryBtn" class="primary-button pymk-connect-btn" style="width: 100px;padding-top: 2px;" data-invite-name="Jon">MEET NOW</button><span id="requestSentBtn" class="invite-sent-msg msg medium hidden" style="display: none">Request sent to Jon</span><span class="pymk-dismissed-msg msg medium hidden">Dismissed</span></div></div></div></li>                                 <li class="pymk-entry" data-id="urn:li:member:201093827" data-vanity="jrishabh" data-tracking-id="Vous8buYQVWsBe6x+d9BSg=="><div class="profile-details flex-entity-lockup"><a href="/in/jrishabh" class="entity-meta profile-image"><img class="person-entity-small" src="https://media.licdn.com/dms/image/C5103AQFqfKW3QV3RtQ/profile-displayphoto-shrink_100_100/0?e=1538006400&amp;v=beta&amp;t=eD1IQMXBS-ByZSF58y9I5gJ44wfreMZqWIw1zvHvEDI"></a><div style="max-height: 100%;" class="entity-content person-details"><a href="/in/jrishabh"><h3 class="medium-dark-semibold">Rishabh Jain</h3><div class="small headline" style="text-align: right;">Core Engineer at Meetup</div></a><div class="pymk-actions actions-container"><button style="width: 100px;" class="secondary-button pymk-delete-btn">SCHEDULE</button><button style="width: 100px;padding-top: 2px;" class="primary-button pymk-connect-btn" data-invite-name="Rishabh">MEET NOW</button><span class="invite-sent-msg msg medium hidden">Request sent to Rishabh</span><span class="pymk-dismissed-msg msg medium hidden">Dismissed</span></div></div></div></li>                         <li class="pymk-entry" data-id="urn:li:member:545760158" data-vanity="ashis-karmakar-512935132" data-tracking-id="bPZGSNZjTsGvJ72czgHQKg=="><div class="profile-details flex-entity-lockup"><a href="/in/ashis-karmakar-512935132" class="entity-meta profile-image"><img class="person-entity-small" src="https://media.licdn.com/dms/image/C5103AQEf8dvJVPpM_g/profile-displayphoto-shrink_100_100/0?e=1538006400&amp;v=beta&amp;t=p5TDWtgtY8FY7qtDklcdKcRQC9UUtllMgUiZCGqTo4I"></a><div style="max-height: 100%;" class="entity-content person-details"><a href="/in/ashis-karmakar-512935132"><h3 class="medium-dark-semibold">Ashis Karmakar</h3><div class="small headline" style="text-align: right;">SAP SD Consultant  at Tata Consultancy Services</div></a><div class="pymk-actions actions-container"><button style="width: 100px;" class="secondary-button pymk-delete-btn">SCHEDULE</button><button style="width: 100px;padding-top: 2px;" class="primary-button pymk-connect-btn" data-invite-name="Ashis">MEET NOW</button><span class="invite-sent-msg msg medium hidden">Request sent to Ashis</span><span class="pymk-dismissed-msg msg medium hidden">Dismissed</span></div></div></div></li></ul></section>'
+
+  setTimeout(function() {
+                showPresentPeople();
+  }, 5000);
+
+  function showPresentPeople() {
+                                document.getElementById("showPeopleBtn").style.display = "none";
+                                document.getElementById("goingPeopleContainer").style.display = "block";
+  }
+
+  function requestSent() {
+                                document.getElementById("customPrimaryBtn").style.display = "none";
+                                document.getElementById("customSecondaryBtn").style.display = "none";
+                                document.getElementById("requestSentBtn").style.display = "block";
+                                document.getElementById("requestSentBtn").classList.remove("hidden");
+  }
+
+  setTimeout(function() {
+                requestSent();
+  }, 15000);
+
+  }
+
+
+})();
